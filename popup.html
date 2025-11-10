@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WhatsApp Extractor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Extrair Contatos</h1>
+  </header>
+
+  <section class="controls">
+    <button id="btn-extract" class="btn primary">Extrair</button>
+    <input id="search" class="input" placeholder="Filtrar por número..." />
+    <div class="spacer"></div>
+    <button id="btn-copy-csv" class="btn">Copiar CSV</button>
+    <button id="btn-copy-md" class="btn">Copiar MD</button>
+    <button id="btn-dl-csv" class="btn">Baixar CSV</button>
+    <button id="btn-dl-md" class="btn">Baixar MD</button>
+  </section>
+
+  <section id="meta" class="meta">0 contatos</section>
+
+  <section id="output" class="table-wrap">
+    <!-- tabela gerada via JS -->
+  </section>
+
+  <footer class="footer">
+    <small>Abra um grupo no WhatsApp Web e clique em “Extrair”.</small>
+  </footer>
+
+  <div class="toast" id="toast" aria-live="polite"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

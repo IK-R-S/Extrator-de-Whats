@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "WhatsApp Contact Extractor",
+  "version": "1.1.0",
+  "description": "Extrai contatos do grupo no WhatsApp Web e gera tabela (CSV/Markdown) com links wa.me.",
+  "permissions": ["scripting", "activeTab", "clipboardWrite"],
+  "host_permissions": ["https://web.whatsapp.com/*"],
+  "action": {
+    "default_title": "Extrair Contatos",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
